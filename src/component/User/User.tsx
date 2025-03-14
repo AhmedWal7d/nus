@@ -1,10 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, Modal, Table } from 'react-bootstrap';
 import { CiEdit } from 'react-icons/ci';
 import { MdDelete } from 'react-icons/md';
 import { Oval } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import AddUser from '../AddUser/AddUser';
 
@@ -25,7 +24,7 @@ export default function User() {
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const navigate = useNavigate();
+
 
   const getUsers = async () => {
     setLoading(true);

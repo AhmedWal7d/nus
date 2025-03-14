@@ -7,9 +7,9 @@ import MasterLayout from './component/MasterLayout/MasterLayout';
 import Home from './component/Home/Home';
 import Profile from './component/Profile/Profile';
 import User from './component/User/User';
-import AddUser from './component/AddUser/AddUser';
 import { ToastContainer } from 'react-toastify';
 import ProtectedRoute from './component/ProtedRout/ProtedRout';
+import AddUser from './component/AddUser/AddUser';
 
 function App() {
   const routes = createBrowserRouter([
@@ -30,14 +30,13 @@ function App() {
         { index: true, element: <Home /> },
         { path: "home", element: <Home /> },
 
-        // 🔹 هنا يتم استخدام ProtectedRoute بشكل صحيح
         {
           element: <ProtectedRoute />, 
           children: [
             { path: "profile", element: <Profile /> },
             { path: "user", element: <User /> },
-            { path: "adduser", element: <AddUser /> },
-          ],
+            { path: "adduser", element: <AddUser updatedate={() => { /* function */ }} /> }
+          ],  
         },
       ],
     },

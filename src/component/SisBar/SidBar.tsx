@@ -1,6 +1,5 @@
 
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import img from '../../assets/pexels-photo-2379004 1.png'
 import { Menu, MenuItem, Sidebar } from 'react-pro-sidebar';
 import { FaBars, FaHome, FaUsers } from 'react-icons/fa';
 import { RiUserAddFill } from 'react-icons/ri';

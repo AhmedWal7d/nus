@@ -14,7 +14,7 @@ interface UserFormData {
 }
 
 interface AddUserProps {
-  updatedate: () => void;
+  updatedate: () => any;
   userId?: number | null;
 }
 
@@ -37,7 +37,7 @@ export default function AddUser({ updatedate, userId }: AddUserProps) {
           setValue('phone', user?.phone);
           setValue('birthDate', user.birthDate);
         })
-        .catch(error => {
+        .catch(() => {
           toast.error("Failed to fetch user data");
         });
     }
