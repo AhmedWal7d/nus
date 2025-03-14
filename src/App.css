@@ -1,0 +1,47 @@
+.login-container {
+    background-color: linear-gradient(to right, rgba(254, 175, 0, 1), rgba(236, 168, 19, 0.5));
+}
+
+.loginaffter::before {
+    content: "";
+    border: 2px #F8D442 solid;
+    margin-right: 10px;
+}
+.bg-sidbar , .sidbar-container{
+    background-color: bisque;
+}
+.text-color{
+    color: #F8D442;
+}
+.imgsidbar img{
+    border-radius: 50%;
+}
+.hoverlink:hover{
+    background-color: #F8D442;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.activelink{
+  background-color: #F8D442;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.pointer-event{
+    cursor: pointer;
+}
+.bg-color{
+    background-color: #F8D442 !important;
+}
+.logout{
+    color: #ff00008c;
+    font-weight: bold;
+    font-size: 18px;
+}
+.h-cart-home{
+    height: 150px;
+}
+.imgnavbar{
+    width: 50px;
+}
