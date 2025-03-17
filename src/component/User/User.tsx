@@ -83,13 +83,13 @@ export default function User() {
             <thead>
               <tr>
                 <th>#</th>
-                <th>الصورة</th>
-                <th>الاسم الأول</th>
-                <th>الاسم الأخير</th>
-                <th>البريد الإلكتروني</th>
-                <th>رقم الهاتف</th>
-                <th>تاريخ الميلاد</th>
-                <th>الإجراءات</th>
+                <th>image</th>
+                <th> first Name</th>
+                <th> Last Name</th>
+                <th> Email</th>
+                <th> Phone</th>
+                <th>BirthDate </th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>

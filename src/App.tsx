@@ -14,7 +14,7 @@ import AddUser from './component/AddUser/AddUser';
 function App() {
   const routes = createBrowserRouter([
     {
-      path: "/",
+      path: "/nus",
       element: <AuthLayout />,
       errorElement: <NotFound />,
       children: [
