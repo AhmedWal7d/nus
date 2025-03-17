@@ -1,41 +1,47 @@
 import { jwtDecode } from "jwt-decode";
 import { createContext, ReactNode, useEffect, useState } from "react";
 
-
 interface User {
     id: string;
     name: string;
     email: string;
+}
 
-}
 interface Authcontexttype {
-    userdata: null | User;
-    saveUserdata: any
+    userdata: User | null;
+    saveUserdata: () => void;
 }
-export const Authcontext = createContext<Authcontexttype | null>(null)
+
+export const Authcontext = createContext<Authcontexttype | null>(null);
 
 interface Authcontextproviderprops {
-    children: ReactNode
+    children: ReactNode;
 }
-export default function Authcontextprovider({ children }: Authcontextproviderprops) {
 
-    const [userdata, setuserdata] = useState<User | null>(null)
+export default function Authcontextprovider({ children }: Authcontextproviderprops) {
+    const [userdata, setuserdata] = useState<User | null>(null);
 
     const saveUserdata = () => {
-        const encodedToken = localStorage.getItem("uertoken")
+        const encodedToken = localStorage.getItem("uertoken");
         if (encodedToken) {
-            const decotedtoken = jwtDecode<User>(encodedToken)
-            setuserdata(decotedtoken)
+            try {
+                const decodedToken = jwtDecode<User>(encodedToken);
+                setuserdata(decodedToken);
+            } catch (error) {
+                console.error("Error decoding token:", error);
+            }
         }
-    }
-    useEffect(() => {
-        if(localStorage.getItem("uertoken")){
-            saveUserdata()
-        }
-    }, [])
-    
-    return(
-        <Authcontext.Provider value={{userdata,saveUserdata}}>{children}</Authcontext.Provider>
-    )
+    };
 
+    useEffect(() => {
+        if (localStorage.getItem("uertoken")) {
+            saveUserdata();
+        }
+    }, []);
+
+    return (
+        <Authcontext.Provider value={{ userdata, saveUserdata }}>
+            {children}
+        </Authcontext.Provider>
+    );
 }
