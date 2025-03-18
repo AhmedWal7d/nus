@@ -2,7 +2,7 @@ import './App.css';
 import AuthLayout from './component/AuthLayout/AuthLayout';
 import NotFound from './component/NotFound/NotFound';
 import Login from './component/Login/Login';
-import {  createHashRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MasterLayout from './component/MasterLayout/MasterLayout';
 import Home from './component/Home/Home';
 import Profile from './component/Profile/Profile';
@@ -12,7 +12,7 @@ import ProtectedRoute from './component/ProtedRout/ProtedRout';
 import AddUser from './component/AddUser/AddUser';
 
 function App() {
-  const routes = createHashRouter([
+  const routes = createBrowserRouter([
     {
       path: "/nus",
       element: <AuthLayout />,
