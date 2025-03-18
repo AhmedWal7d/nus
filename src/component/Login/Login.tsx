@@ -73,7 +73,7 @@ export default function Login() {
               <div className='mt-3'>
                 <label>username</label>
                 <input type='text'
-                // value={"emilys"}
+                value={"emilys"}
                   {...register("username", { required: "username is not file" })}
                   placeholder='Enter Your Email ' className='form-control mt-2 p-2' />
 
@@ -83,7 +83,7 @@ export default function Login() {
               <div className='mt-4'>
                 <label>Password</label>
                 <input type='password'
-                // value={"emilyspass"}
+                value={"emilyspass"}
                   {...register("password", { required: "username is not file" })}
                   placeholder='Enter Your Password ' className='form-control mt-2 p-2' />
                 {errors.password && <span className='text-danger'> {errors.password.message} </span>}
