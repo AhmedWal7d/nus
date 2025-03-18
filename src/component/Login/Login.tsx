@@ -64,7 +64,7 @@ export default function Login() {
               />
             </div> : <form className='bg-white rounded p-4 mt-5 w-75 mx-auto' onSubmit={handleSubmit(onsubmit)}>
               <div className='title text-center '>
-                <h3 className='fw-bold loginaffter'>User. mangement System   </h3>
+                <h3 className='fw-bold loginaffter'>User mangement System   </h3>
                 <div className='text-center mt-3'>
                   <h4>Sign In</h4>
                   <small className='text-muted'>Enter Your Credentials to access Your account</small>

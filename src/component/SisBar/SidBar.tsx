@@ -26,7 +26,7 @@ export default function SidBar() {
 
 
   let logout = ()=>{
-    navigate("/")
+    navigate("/nus")
     localStorage.removeItem("uertoken")
     toast.success("logout success")
   }
